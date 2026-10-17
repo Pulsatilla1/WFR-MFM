@@ -1,0 +1,23 @@
+experiment: eb_50d
+seed: 11
+data:
+  path: data/real/eb_pca50.csv
+  time_column: samples
+  dimension: 50
+model:
+  hidden_dim: 256
+  hidden_layers: 5
+  activation: leakyrelu
+transport:
+  delta: 25.0
+  bandwidth: 0.0
+  mini_batch: true
+  chunk_size: 1500
+training:
+  epochs: 3000
+  batch_size: 512
+  learning_rate: 0.005
+  lambda_growth: 100.0
+  p_diff: 0.6
+  weight_decay: 0.0
+  log_every: 50

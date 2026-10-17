@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the accompanying manuscript."
+title: "WFR-MFM"
+type: software
+version: 0.1.0
+authors:
+  - family-names: Wang
+    given-names: Xinyu
+  - family-names: Wang
+    given-names: Ruoyu
+  - family-names: Peng
+    given-names: Qiangwei
+  - family-names: Zhou
+    given-names: Peijie
+  - family-names: Li
+    given-names: Tiejun
+preferred-citation:
+  type: article
+  title: "WFR-MFM: One-Step Inference for Dynamic Unbalanced Optimal Transport"
+  year: 2026
+  authors:
+    - family-names: Wang
+      given-names: Xinyu
+    - family-names: Wang
+      given-names: Ruoyu
+    - family-names: Peng
+      given-names: Qiangwei
+    - family-names: Zhou
+      given-names: Peijie
+    - family-names: Li
+      given-names: Tiejun

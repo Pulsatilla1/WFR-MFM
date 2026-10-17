@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wfr-mfm"
+version = "0.1.0"
+description = "One-step mean-flow inference for dynamic unbalanced optimal transport"
+readme = "README.md"
+requires-python = ">=3.10,<3.13"
+authors = [
+  {name = "Xinyu Wang"},
+  {name = "Ruoyu Wang"},
+  {name = "Qiangwei Peng"},
+  {name = "Peijie Zhou"},
+  {name = "Tiejun Li"},
+]
+dependencies = [
+  "numpy>=1.24",
+  "pandas>=2.0",
+  "POT>=0.9",
+  "PyYAML>=6.0",
+  "torch>=2.1",
+  "tqdm>=4.66",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.6"]
+
+[project.scripts]
+wfr-mfm = "wfr_mfm.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["wfr_mfm*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"

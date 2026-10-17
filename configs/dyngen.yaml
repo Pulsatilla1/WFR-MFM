@@ -1,0 +1,23 @@
+experiment: dyngen
+seed: 42
+data:
+  path: data/synthetic/dyngen.csv
+  time_column: samples
+  dimension: 5
+model:
+  hidden_dim: 256
+  hidden_layers: 5
+  activation: leakyrelu
+transport:
+  delta: 1.5
+  bandwidth: 0.0
+  mini_batch: false
+  chunk_size: 1500
+training:
+  epochs: 3000
+  batch_size: 256
+  learning_rate: 0.005
+  lambda_growth: 5.0
+  p_diff: 0.5
+  weight_decay: 0.0
+  log_every: 50

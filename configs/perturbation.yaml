@@ -1,0 +1,27 @@
+experiment: perturbation_3d
+seed: 11
+data:
+  path: data/perturbation/train_cells.csv
+  embedding_path: data/perturbation/train_embeddings.csv
+  condition_column: samples
+  control_label: 0
+  dimension: 3
+model:
+  hidden_dim: 256
+  hidden_layers: 5
+  activation: leakyrelu
+transport:
+  delta_base: 1.0
+  bandwidth: 0.0
+  delta_mode: endpoint_ratio
+  mini_batch: true
+  chunk_size: 1500
+training:
+  epochs: 2000
+  batch_size: 512
+  condition_batch_size: 100
+  learning_rate: 0.005
+  lambda_growth: 0.1
+  p_diff: 0.5
+  weight_decay: 0.0
+  log_every: 20

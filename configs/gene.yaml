@@ -1,0 +1,23 @@
+experiment: gene
+seed: 42
+data:
+  path: data/synthetic/simulation_gene_data.csv
+  time_column: samples
+  dimension: 2
+model:
+  hidden_dim: 256
+  hidden_layers: 5
+  activation: leakyrelu
+transport:
+  delta: 1.5
+  bandwidth: 0.0
+  mini_batch: false
+  chunk_size: 1500
+training:
+  epochs: 3000
+  batch_size: 400
+  learning_rate: 0.005
+  lambda_growth: 0.05
+  p_diff: 0.6
+  weight_decay: 0.0
+  log_every: 50
